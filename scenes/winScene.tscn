@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwp13b0pgn04d"]
+
+[ext_resource type="PackedScene" uid="uid://cr3p61upolevm" path="res://models/player.blend" id="1_vbvsc"]
+[ext_resource type="PackedScene" uid="uid://dadpdx2xl6jq3" path="res://models/enemy.blend" id="2_0f3xq"]
+[ext_resource type="PackedScene" uid="uid://g41blo87xaiu" path="res://models/toof.blend" id="3_d7t7o"]
+[ext_resource type="PackedScene" uid="uid://47jhlkkjw2ip" path="res://models/blob.blend" id="4_6jdgr"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.984602, 1.67148)
+current = true
+
+[node name="player" parent="." instance=ExtResource("1_vbvsc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0721104, 0.045271, 0.59748)
+
+[node name="enemy" parent="." instance=ExtResource("2_0f3xq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53878, -0.0615139, 0.00671291)
+
+[node name="toof" parent="." instance=ExtResource("3_d7t7o")]
+transform = Transform3D(0.999999, 0.00086602, 0.00103728, 0.000638232, 0.373928, -0.927457, -0.00119105, 0.927457, 0.373928, -1.17833, 1.10728, -0.177338)
+
+[node name="blob" parent="." instance=ExtResource("4_6jdgr")]
+transform = Transform3D(-0.541811, 0, -0.8405, 0, 1, 0, 0.8405, 0, -0.541811, -0.824627, 0.353462, 0.681775)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -148.0
+offset_bottom = 148.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/normal_font_size = 150
+bbcode_enabled = true
+text = "[rainbow][center][wave amp=300]You Win![/wave][/center][/rainbow]"

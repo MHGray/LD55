@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwtabmpr1bkqb"]
+
+[ext_resource type="Script" path="res://maestro.gd" id="1_xcq1p"]
+[ext_resource type="AudioStream" uid="uid://8p2jpwolt6w0" path="res://audio/music/openingMusic.mp3" id="2_bpva6"]
+[ext_resource type="AudioStream" uid="uid://hvmnacwr805r" path="res://audio/music/mainMusic.mp3" id="3_7fsqg"]
+
+[node name="Maestro" type="Node"]
+script = ExtResource("1_xcq1p")
+
+[node name="MainMenuMusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_bpva6")
+autoplay = true
+bus = &"Music"
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7fsqg")
+bus = &"Music"
